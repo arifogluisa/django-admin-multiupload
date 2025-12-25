@@ -1,0 +1,269 @@
+/* Multiple Upload Container */
+.multiple-upload-container {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Dropzone */
+.multiple-upload-dropzone {
+    position: relative;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+/* Django-style error list below dropzone */
+.multiple-upload-errors {
+    margin: 0;
+    padding: 8px 12px;
+    background: #ffebee;
+    border: 1px solid #ef9a9a;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+    margin-top: -8px;
+    list-style: none;
+}
+
+.multiple-upload-errors:empty {
+    display: none;
+}
+
+.multiple-upload-errors li {
+    color: #c62828;
+    font-size: 12px;
+    padding: 4px 0;
+    margin: 0;
+}
+
+.multiple-upload-errors li:not(:last-child) {
+    border-bottom: 1px solid #ef9a9a;
+}
+
+.multiple-upload-dropzone:hover {
+    border-color: #417690;
+    background: #f0f7fa;
+}
+
+.multiple-upload-dropzone.dragover {
+    border-color: #417690;
+    background: #e8f4f8;
+    transform: scale(1.01);
+}
+
+.multiple-upload-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropzone-content {
+    pointer-events: none;
+}
+
+.dropzone-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dropzone-text {
+    color: #666;
+    font-size: 13px;
+}
+
+/* File Previews Container */
+.image-previews,
+.file-previews {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+/* Preview Wrapper */
+.preview-wrapper {
+    position: relative;
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.preview-wrapper:hover {
+    border-color: #417690;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Error state */
+.preview-wrapper.preview-error {
+    border-color: #dc3545;
+    background: #fff5f5;
+}
+
+.preview-wrapper.preview-error:hover {
+    border-color: #dc3545;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.preview-wrapper.preview-error .file-preview {
+    opacity: 0.6;
+}
+
+.preview-error-message {
+    position: absolute;
+    bottom: -18px;
+    left: -2px;
+    right: -2px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #dc3545;
+    background: #fff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Preview Image */
+.file-preview {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.file-preview.file-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px dashed #ced4da;
+    border-radius: 4px;
+    padding: 8px 4px;
+}
+
+/* File extension display */
+.file-extension {
+    font-size: 18px;
+    font-weight: 700;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* File name display */
+.file-name {
+    font-size: 10px;
+    color: #6c757d;
+    text-align: center;
+    word-break: break-all;
+    line-height: 1.2;
+    max-width: 90px;
+}
+
+/* Remove Button */
+.remove-preview {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.preview-wrapper:hover .remove-preview {
+    opacity: 1;
+}
+
+.remove-preview:hover {
+    background: #dc3545;
+    transform: scale(1.1);
+}
+
+.remove-preview:focus {
+    outline: 2px solid #417690;
+    outline-offset: 2px;
+    opacity: 1;
+}
+
+/* Custom tooltip for remove button */
+.remove-preview::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    margin-top: 4px;
+    z-index: 1000;
+}
+
+.remove-preview:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-previews,
+    .file-previews {
+        gap: 8px;
+    }
+    
+    .file-preview {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .multiple-upload-dropzone {
+        padding: 15px;
+    }
+    
+    .dropzone-icon {
+        font-size: 24px;
+    }
+}

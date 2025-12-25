@@ -1,0 +1,10 @@
+{% extends "admin/change_form.html" %}
+
+{% block extrahead %}
+{{ block.super }}
+{% if multiple_upload_configs %}
+<script>
+    window.MULTIPLE_UPLOAD_CONFIGS = {{ multiple_upload_configs }};
+</script>
+{% endif %}
+{% endblock %}
