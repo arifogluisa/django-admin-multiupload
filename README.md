@@ -111,7 +111,7 @@ That is it. The admin change form will render the drag-and-drop upload area and 
 4. Files are uploaded and saved automatically when you save the parent object
 
 ## License
-Released under [MIT License](LICENSE).
+Released under [MIT License](https://github.com/arifogluisa/django-admin-multiupload/blob/master/LICENSE).
 
 ## Supporting
 
