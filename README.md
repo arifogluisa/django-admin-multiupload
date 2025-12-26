@@ -1,5 +1,5 @@
 [![](https://img.shields.io/pypi/v/django-admin-multiupload.svg?color=blue&logo=pypi&logoColor=white)](https://pypi.org/project/django-admin-multiupload/)
-[![PyPI Downloads](https://static.pepy.tech/personalized-badge/django-admin-multiupload?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/django-admin-multiupload)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/django-admin-multiupload?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=download)](https://pepy.tech/projects/django-admin-multiupload)
 [![](https://img.shields.io/github/stars/arifogluisa/django-admin-multiupload?logo=github)](https://github.com/arifogluisa/django-admin-multiupload/stargazers)
 [![](https://img.shields.io/pypi/l/django-admin-multiupload.svg?color=blue)](https://github.com/arifogluisa/django-admin-multiupload/blob/master/LICENSE)
 
@@ -111,5 +111,9 @@ That is it. The admin change form will render the drag-and-drop upload area and 
 4. Files are uploaded and saved automatically when you save the parent object
 
 ## License
+Released under [MIT License](LICENSE).
 
-MIT License - see LICENSE file for details.
+## Supporting
+
+- ⭐ Star this project on [GitHub](https://github.com/arifogluisa/django-admin-multiupload)
+- ⚡ Follow me on [GitHub](https://github.com/arifogluisa)
