@@ -91,8 +91,8 @@ class MultipleUploadInlineMixin:
         )
 
     class Media:
-        css = {"all": ("multiple_inline_upload/css/multiple_upload.css",)}
-        js = ("multiple_inline_upload/js/multiple_upload.js",)
+        css = {"all": ("django_admin_multiupload/css/multiple_upload.css",)}
+        js = ("django_admin_multiupload/js/multiple_upload.js",)
 
 
 class MultipleUploadAdminMixin:
@@ -106,7 +106,7 @@ class MultipleUploadAdminMixin:
             inlines = [ProductImageInline]  # ProductImageInline uses MultipleUploadInlineMixin
     """
 
-    change_form_template = "admin/multiple_inline_upload/change_form.html"
+    change_form_template = "admin/django_admin_multiupload/change_form.html"
 
     def changeform_view(self, request, object_id=None, form_url="", extra_context=None):
         """Inject multiple upload config into the page."""
